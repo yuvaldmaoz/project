@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>📱 Phone Book</header>
+    <main>
+        <div class="header_main">
+            <input id="search_bar" type="text" onkeyup="search_users()" placeholder="Search..">
+            <button id="add_new" onclick="openModal()"> ➕ Add Contact </button>
+        </div>
+        <ul id="contactList"></ul>
+    </main>
+
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <input type="text" id="contactName" placeholder="Name">
+            <input type="text" id="contactPhone" placeholder="Phone">
+            <input type="email" id="contactEmail" placeholder="Email">
+            <button onclick="saveContact()">Save</button>
+            <button onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="modal" id="detailsModal">
+        <div class="modal-content">
+            <div id="contactDetails"></div>
+            <button onclick="closeDetailsModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+
+</html>
